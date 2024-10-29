@@ -41,7 +41,7 @@ echo "export RK_CUSTOM_ROOTFS=../sysdrv/custom_rootfs/$ROOTFS_NAME" >> .BoardCon
 echo "export RK_BOOTARGS_CMA_SIZE=\"1M\"" >> .BoardConfig.mk
 
 if [ "$DEVICE_ID" -eq 7 ]; then
-    echo 'export RK_PARTITION_CMD_IN_ENV="256K(env),256K@256K(idblock),512K(uboot),4M(boot),5M(oem),10M(userdata),105M(rootfs)"' >> .BoardConfig.mk
+    echo 'export RK_PARTITION_CMD_IN_ENV="256K(env),256K@256K(idblock),512K(uboot),4M(boot),10M(oem),10M(userdata),100M(rootfs)"' >> .BoardConfig.mk
 fi
 
 # build sysdrv - rootfs
